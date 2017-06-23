@@ -1,19 +1,21 @@
 from django.db import models
 
 from branches.models import Branches
+from courses.models import Courses
 
 # Create your models here.
 
 
 class Batches(models.Model):
-    course = models.CharField(max_length=255)
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE)
     start_date = models.DateField()
     center = models.ForeignKey(Branches, on_delete=models.CASCADE)
     start_time = models.TimeField()
     end_time = models.TimeField()
+    active = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.name
+        return '{}'.format(self.course.name)
 
     class Meta:
         verbose_name = 'Batch'

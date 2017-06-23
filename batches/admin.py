@@ -6,4 +6,8 @@ from django.contrib import admin
 from .models import Batches
 
 
-admin.site.register(Batches)
+class BatchesAdmin(admin.ModelAdmin):
+    list_display = ('course', 'center', 'start_date', 'start_time', 'end_time', 'active')
+
+
+admin.site.register(Batches, BatchesAdmin)

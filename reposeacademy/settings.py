@@ -76,10 +76,20 @@ WSGI_APPLICATION = 'reposeacademy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'response_academy',
+        'NAME': 'repose_academy',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
+    },
+    'replica': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'repose_academy',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'TEST': {
+            'MIRROR': 'default',
+        }
     }
 }
 

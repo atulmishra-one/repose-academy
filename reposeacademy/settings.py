@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'contactus',
     'branches',
     'batches',
+    'courses',
 ]
 
 MIDDLEWARE = [

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'branches',
     'batches',
     'courses',
+    'gallery',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,5 @@ MEDIA_URL = '/media/'
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Repose Academy'
 }
+
+MARKITUP_FILTER = ('markdown.markdown', {})

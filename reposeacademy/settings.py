@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '173.230.152.98',
-    'reposecoachingcenter.com'
+    'reposecoachingcenter.com',
+    '127.0.0.1'
 ]
 
 
@@ -144,7 +145,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+MEDIA_URL = '/media/'
 
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Repose Academy'

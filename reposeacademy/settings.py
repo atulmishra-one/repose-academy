@@ -23,12 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gv8c=1h$ib&f2)td58-!k*b6j^o8mmo*_j!o9i_z@lu3^gl)ir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = [
     '173.230.152.98',
     'reposecoachingcenter.com',
-    '127.0.0.1'
+    '127.0.0.1',
+    'wwww.reposecoachingcenter.com'
 ]
 
 

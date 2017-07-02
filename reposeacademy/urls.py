@@ -19,10 +19,14 @@ from django.contrib import admin
 from django.conf import settings
 from django.views.static import serve
 from coming_app.views import index
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^gallery/', include('gallery.urls', namespace='gallery')),
-    url(r'^', index),
+    url(r'^$', index),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

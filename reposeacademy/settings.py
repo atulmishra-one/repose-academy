@@ -150,8 +150,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 MEDIA_URL = '/media/'
@@ -160,4 +158,6 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'Repose Academy'
 }
 
-MARKITUP_FILTER = ('markdown.markdown', {})
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]

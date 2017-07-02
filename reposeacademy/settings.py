@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     '173.230.152.98',
     'reposecoachingcenter.com',
     '127.0.0.1',
-    'wwww.reposecoachingcenter.com'
+    'wwww.reposecoachingcenter.com',
 ]
 
 

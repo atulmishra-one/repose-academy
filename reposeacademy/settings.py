@@ -92,14 +92,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'repose_academy',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
     },
     'replica': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'repose_academy',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'TEST': {
             'MIRROR': 'default',
@@ -149,6 +149,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 

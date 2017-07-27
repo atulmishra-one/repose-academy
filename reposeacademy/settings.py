@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gv8c=1h$ib&f2)td58-!k*b6j^o8mmo*_j!o9i_z@lu3^gl)ir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '173.230.152.98',
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'courses',
     'gallery',
     'coming_app',
+    'default'
 ]
 
 MIDDLEWARE = [
@@ -150,7 +151,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 

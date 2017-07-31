@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'branches',
     'batches',
     'courses',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,6 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
-        'PORT': '3307',
     },
     'replica': {
         'ENGINE': 'django.db.backends.mysql',
@@ -93,7 +93,6 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
-        'PORT': '3307',
         'TEST': {
             'MIRROR': 'default',
         }
@@ -148,3 +147,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR)
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Repose Academy'
 }
+
+TINYMCE_SETUP_JS = ''
+
+JQUERY_UI_FILENAME = ''
+
+PACKAGE_NAME_FILEBROWSER =''
+
+AUTH_USER_MODEL = 'users.User'

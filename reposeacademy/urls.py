@@ -28,6 +28,8 @@ urlpatterns = [
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     url(r'^gallery/', include('gallery.urls', namespace='gallery')),
     url(r'^', include('default.urls')),
+    url(r'^contactus/', include('contactus.urls')),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

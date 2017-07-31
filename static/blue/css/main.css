@@ -30,13 +30,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .small-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .widget-title {
   margin: 0;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 .page-title h6 {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   float: left;
   margin: 0;
@@ -192,7 +192,7 @@ blockquote h5 {
 }
 
 .logo {
-  margin: 40px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -672,6 +672,7 @@ input, select {
 }
 .our-campus ul li {
   float: left;
+  margin: 0px 30px;
 }
 .our-campus ul li img {
   opacity: .5;
@@ -1248,4 +1249,8 @@ input, select {
 .footer-nav li:not(:first-child):before {
   padding: 0 10px;
   content: '|';
+}
+
+.top-phone-number, .top-email-address{
+    font-size: 16px;
 }

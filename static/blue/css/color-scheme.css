@@ -30,7 +30,7 @@ body,
 }
 
 .search-form form input {
-  background-color: #004074;
+  background-color: #fff;
 }
 
 .responsive_menu {
@@ -51,12 +51,12 @@ body,
 .social_icons li a,
 .footer-media-icons li a,
 .flex-direction-nav a {
-  background-color: #003a6a;
+  background-color: #0c9da6;
 }
 
 .main-navigation,
 .site-footer {
-  background-color: #004884;
+  background-color: #1d6469;
 }
 
 blockquote,
@@ -131,7 +131,7 @@ body,
 .main-menu li ul li:before,
 .site-header,
 .site-header a {
-  color: #8ab5d6;
+  color: #fff;
 }
 
 .site-header a:hover {
@@ -164,7 +164,7 @@ blockquote h5,
 .blog-categories ul li a:hover,
 .author-name a,
 .author-name a:hover {
-  color: #4782b2;
+  color: #1d6469;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -220,7 +220,7 @@ blockquote,
 .search-form form input,
 .main-navigation,
 .main-menu li {
-  border-color: #00569d;
+  border-color: #1d6469;
 }
 
 .main-menu li ul li {
@@ -230,7 +230,7 @@ blockquote,
 body,
 .main-menu li ul,
 .tab-content > .tab-pane {
-  border-color: #fecd0b;
+  border-color: #1d6469;
 }
 
 .site-header,
@@ -239,7 +239,7 @@ body,
 }
 
 .bottom-footer {
-  border-color: #003a6a;
+  border-color: #1d6469;
 }
 
 .course-list dt,

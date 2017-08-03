@@ -7,6 +7,8 @@ class Courses(models.Model):
     name = models.CharField(max_length=255)
     active = models.BooleanField(default=False)
     slug = models.SlugField(max_length=255, default=None)
+    description = models.CharField(max_length=255, default=None)
+    syllabus = models.CharField(max_length=255, default=None)
 
     def __str__(self):
         return self.name

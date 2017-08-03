@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'courses',
     'gallery',
     'coming_app',
-    'default'
+    'default',
+    'suit_redactor',
 ]
 
 MIDDLEWARE = [
@@ -93,14 +94,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'repose_academy',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
     },
     'replica': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'repose_academy',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
         'TEST': {
             'MIRROR': 'default',

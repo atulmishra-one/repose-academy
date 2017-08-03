@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gv8c=1h$ib&f2)td58-!k*b6j^o8mmo*_j!o9i_z@lu3^gl)ir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '173.230.152.98',
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'courses',
     'gallery',
     'coming_app',
+    'suit_redactor',
 ]
 
 MIDDLEWARE = [
@@ -92,14 +93,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'repose_academy',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
     },
     'replica': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'repose_academy',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
         'TEST': {
             'MIRROR': 'default',

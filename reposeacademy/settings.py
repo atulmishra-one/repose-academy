@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'coming_app',
     'default',
     'suit_redactor',
+    'menu'
 ]
 
 MIDDLEWARE = [

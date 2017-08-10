@@ -98,14 +98,17 @@
     </div> <!-- /.responsive_menu -->
 </div> <!-- /responsive_navigation -->
 
+{% load branches %}
+
+{% get_main_branch as main_branch %}
 
 <header class="site-header">
     <div class="container">
         <div class="row">
             <div class="col-md-4 header-left">
-                <p class="top-phone-number"><i class="fa fa-phone"></i> +01 2334 853</p>
+                <p class="top-phone-number"><i class="fa fa-phone"></i> +91 {{main_branch.contact}} </p>
                 <p><i class="fa fa-envelope"></i>
-                    <a href="mailto:email@universe.com" class="top-email-address">contact@reposecoachingcenter.com</a></p>
+                    <a href="mailto:email@universe.com" class="top-email-address">{{main_branch.email}}</a></p>
             </div> <!-- /.header-left -->
 
             <div class="col-md-4">
@@ -117,11 +120,6 @@
             </div> <!-- /.col-md-4 -->
 
             <div class="col-md-4 header-right">
-                <address>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                    Near sipara bridge, Jai Prakash Nagar<br>
-                    Ram Govind Singh Path <br> Patna-800001
-                </address>
             </div> <!-- /.header-right -->
         </div>
     </div> <!-- /.container -->
@@ -142,8 +140,7 @@
                     <h4 class="footer-widget-title">Contact Us</h4>
                     <p>Repose coaching center <br>
                     <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                    Near sipara bridge, Jai Prakash Nagar<br>
-                    Ram Govind Singh Path <br> Patna-800001</p>
+                    {{main_branch.address}}</p>
                 </div>
             </div>
             <div class="col-md-2">

@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^', include('default.urls')),
     url(r'^contactus/', include('contactus.urls')),
     url(r'^courses/', include('courses.urls', namespace='courses')),
+    url(r'^branches/', include('branches.urls', namespace='branches')),
 
 ]
 

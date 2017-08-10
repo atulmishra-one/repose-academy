@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+    <!-- Being Page Title -->
+    <div class="container">
+        <div class="page-title clearfix">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6><a href="/">Home</a></h6>
+                    <h6><span class="page-active">Branches</span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Here begin Main Content -->
+            <div class="col-md-8">
+                <div class="row">
+
+                    <div class="col-md-12">
+                      {% for branch in object_list %}
+                        <div class="list-event-item">
+                            <div class="box-content-inner clearfix">
+
+                                <h5 class="event-title"><a href="#">
+                                    {{branch.name}}
+                                </a></h5>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <i class="fa fa-phone"></i>&nbsp;+91 {{branch.contact}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <i class="fa fa-phone"></i>&nbsp;+91 {{branch.alternate_contact}}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <i class="fa fa-envelope"></i>&nbsp;{{branch.email}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <address>
+                                            <i class="fa fa-map-marker"></i>&nbsp;
+                                            {{branch.address|title}}
+                                        </address>
+                                    </div>
+                                </div>
+
+                            </div> <!-- /.box-content-inner -->
+                        </div> <!-- /.list-event-item -->
+                      {% endfor %}
+                    </div> <!-- /.col-md-12 -->
+
+                </div> <!-- /.row -->
+
+            </div> <!-- /.col-md-8 -->
+
+            <!-- Here begin Sidebar -->
+            <div class="col-md-4">
+
+                <div class="widget-main">
+                    <div class="widget-main-title">
+                        <h4 class="widget-title">Upcoming Events</h4>
+                    </div> <!-- /.widget-main-title -->
+                    <div class="widget-inner">
+                        <div class="event-small-list clearfix">
+                            <div class="calendar-small">
+                                <span class="s-month">Jan</span>
+                                <span class="s-date">24</span>
+                            </div>
+                            <div class="event-small-details">
+                                <h5 class="event-small-title"><a href="event-single.html">Nelson Mandela Memorial Tribute</a></h5>
+                                <p class="event-small-meta small-text">Cramton Auditorium 9:00 AM to 1:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="event-small-list clearfix">
+                            <div class="calendar-small">
+                                <span class="s-month">Jan</span>
+                                <span class="s-date">24</span>
+                            </div>
+                            <div class="event-small-details">
+                                <h5 class="event-small-title"><a href="event-single.html">OVADA Oxford Open</a></h5>
+                                <p class="event-small-meta small-text">Posner Center 4:30 PM to 6:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="event-small-list clearfix">
+                            <div class="calendar-small">
+                                <span class="s-month">Jan</span>
+                                <span class="s-date">24</span>
+                            </div>
+                            <div class="event-small-details">
+                                <h5 class="event-small-title"><a href="event-single.html">Filming Objects And Sculpture</a></h5>
+                                <p class="event-small-meta small-text">A70 Cyert Hall 12:00 PM to 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div> <!-- /.widget-inner -->
+                </div> <!-- /.widget-main -->
+
+                <div class="widget-main">
+                    <div class="widget-main-title">
+                        <h4 class="widget-title">Photo from Events</h4>
+                    </div>
+                    <div class="widget-inner">
+                        <div class="gallery-small-thumbs clearfix">
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg" title="Gallery Tittle One">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg" title="Gallery Tittle Two">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                            <div class="thumb-small-gallery">
+                                <a class="fancybox" data-fancybox-group="gallery1" href="images/slide1.jpg">
+                                    <img src="http://placehold.it/70x70" alt="" />
+                                </a>
+                            </div>
+                        </div> <!-- /.galler-small-thumbs -->
+                    </div> <!-- /.widget-inner -->
+                </div> <!-- /.widget-main -->
+
+            </div> <!-- /.col-md-4 -->
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+{% endblock %}

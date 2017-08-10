@@ -20,7 +20,7 @@ class EditorAdmin(ModelAdmin):
     model = Courses
     form = EditorForm
 
-    fields = ['name', 'active', 'slug', 'description']
+    fields = ['name', 'heading', 'active', 'image', 'slug', 'description']
 
 
 admin.site.register(Courses, EditorAdmin)

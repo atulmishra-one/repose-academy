@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^gallery/', include('gallery.urls', namespace='gallery')),
     url(r'^', include('default.urls')),
     url(r'^contactus/', include('contactus.urls')),
+    url(r'^courses/', include('courses.urls', namespace='courses')),
 
 ]
 

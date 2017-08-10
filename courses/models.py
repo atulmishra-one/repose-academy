@@ -7,6 +7,8 @@ class Courses(models.Model):
     name = models.CharField(max_length=255)
     active = models.BooleanField(default=False)
     slug = models.SlugField(max_length=255, default=None)
+    heading = models.CharField(max_length=255, default=None)
+    image = models.ImageField(upload_to='courses', default=None)
     description = models.TextField(default=None)
 
     def __str__(self):

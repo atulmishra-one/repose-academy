@@ -9,7 +9,7 @@ from .feeds import GalleryFeed
 from .views import GalleryListView, GalleryMonthArchiveView, \
     GalleryDetailsView, TaggedPhotoListView, ExifPhotoListView, PhotoDetailsView
 
-app_name = 'gallery'
+app_name = 'gallerynotinuse'
 
 urlpatterns = [
     url(

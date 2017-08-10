@@ -20,7 +20,7 @@ class GalleryFeed(Feed):
     """
 
     title = _("reposecoach.net - galleries")
-    link = reverse_lazy('gallery:gallery_list')
+    link = reverse_lazy('gallerynotinuse:gallery_list')
     description = _("Latest photo galleries")
 
     def items(self):

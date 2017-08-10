@@ -1,0 +1,7 @@
+{% for photo in photos %}
+    <div class="thumb-small-gallery">
+        <a class="fancybox" data-fancybox-group="gallery1" href="{{photo.image.url}}">
+            <img src="{{photo.image.url}}" alt="{{photo.title}}" />
+        </a>
+    </div>
+{% endfor %}

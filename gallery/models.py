@@ -27,6 +27,7 @@ class GalleryQuerySet(QuerySet):
         return self.filter(status='published')
 
 
+
 @python_2_unicode_compatible
 class Gallery(StatusModel, TimeStampedModel):
     STATUS = Choices(
@@ -49,7 +50,7 @@ class Gallery(StatusModel, TimeStampedModel):
 
     def __str__(self):
         """
-        The string representation of a gallery is its title.
+        The string representation of a gallerynotinuse is its title.
         """
         return self.title
 
@@ -127,9 +128,9 @@ class Photo(TimeStampedModel):
 
     def get_next_photo(self):
         """
-        Returns next photo from the same gallery (in chronological order).
+        Returns next photo from the same gallerynotinuse (in chronological order).
 
-        Wraps around from last photo in the gallery to the first one.
+        Wraps around from last photo in the gallerynotinuse to the first one.
         """
         try:
             next_photo = Photo.objects.filter(
@@ -142,9 +143,9 @@ class Photo(TimeStampedModel):
 
     def get_previous_photo(self):
         """
-        Returns previous photo from the same gallery (in chronological order).
+        Returns previous photo from the same gallerynotinuse (in chronological order).
 
-        Wraps around from first photo in the gallery to the last one.
+        Wraps around from first photo in the gallerynotinuse to the last one.
         """
         try:
             previous_photo = Photo.objects.filter(

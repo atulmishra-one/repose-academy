@@ -43,7 +43,7 @@ class TaggedPhotoListView(ListView):
 
 
 class ExifPhotoListView(ListView):
-    template_name = 'gallery/exif_photo_list.html'
+    template_name = 'gallerynotinuse/exif_photo_list.html'
 
     def get_queryset(self):
         return Photo.objects.for_exif(self.kwargs['exif_key'], self.kwargs['exif_value'])

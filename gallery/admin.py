@@ -60,14 +60,14 @@ class GalleryAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         """
-        Add number of photos to each gallery.
+        Add number of photos to each gallerynotinuse.
         """
         qs = super(GalleryAdmin, self).get_queryset(request)
         return qs.annotate(photo_count=Count('photos'))
 
     def save_model(self, request, obj, form, change):
         """
-        Set currently authenticated user as the author of the gallery.
+        Set currently authenticated user as the author of the gallerynotinuse.
         """
         obj.author = request.user
         obj.save()

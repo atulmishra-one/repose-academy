@@ -11,13 +11,7 @@ class DefaultPage(View):
     template_name = 'default/index.html'
 
     def get(self, request, *args, **kwargs):
-        about_us = Cms.objects.get(name='main-page-about-us')
-        director_message = Cms.objects.get(name='director-message-main')
-
-        return render(request, self.template_name, {
-            'about_us': about_us.content,
-            'director_message': director_message.content
-        })
+        return render(request, self.template_name)
 
     def post(self, request, *args, **kwargs):
         course_id = request.POST['cat2']

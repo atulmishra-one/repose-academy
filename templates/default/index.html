@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load cms_tags %}
+
 {% block content %}
     <div class="container">
         <div class="row">
@@ -13,21 +15,21 @@
                                 <img src="{% static 'images/slider002.jpg' %}" alt="Slide 1"/>
                                 <div class="slider-caption">
                                     <h2><a href="#">SCC</a></h2>
-                                    <p>Best SSC Coaching.</p>
+                                    <p>The SSC test series at Repose coaching are designed chiefly in comprehensive teaching patterns in accordance with the guidelines of the erudite experts.</p>
                                 </div>
                             </li>
                             <li>
                                 <img src="{% static 'images/slider03.jpg' %}" alt="Slide 1"/>
                                 <div class="slider-caption">
                                     <h2><a href="#">Bank PO</a></h2>
-                                    <p>Best Bank PO Coaching.</p>
+                                    <p>Repose coaching is a well-known centre, providing perfect guidance along with required study material for Bank PO Coaching.</p>
                                 </div>
                             </li>
                             <li>
                                 <img src="{% static 'images/slider04.jpg' %}" alt="Slide 1"/>
                                 <div class="slider-caption">
                                     <h2><a href="blog-single.html">Railways</a></h2>
-                                    <p>Best Railways Coaching.</p>
+                                    <p>Repose coaching is a well-known centre, providing perfect guidance along with required study material for Railways Coaching.</p>
                                 </div>
                             </li>
                         </ul> <!-- /.slides -->
@@ -104,7 +106,7 @@
                         <div class="widget-item">
                             <h2 class="welcome-text">WELCOME TO REPOSE COACHING CENTER </h2>
                             {% autoescape off %}
-                                {{ about_us }}
+                                {% about_us %}
                             {% endautoescape %}
                         </div> <!-- /.widget-item -->
                     </div> <!-- /.col-md-12 -->
@@ -229,7 +231,7 @@
                                         <!--</div>-->
                                         <div class="col-lg-12">
                                             {% autoescape off %}
-                                                {{director_message}}
+                                                {% director_message %}
                                             {% endautoescape %}
                                         </div>
 

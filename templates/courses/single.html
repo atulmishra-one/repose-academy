@@ -27,14 +27,17 @@
                     <div class="col-md-12">
 
                         <div class="course-post">
+                            {% if object.image %}
                             <div class="course-image">
                                 <img src="{{object.image.url}}" alt="Repose coaching - {{object.name}}">
                             </div> <!-- /.course-image -->
+                            {% endif %}
                             <div class="course-details clearfix">
                                 <h3 class="course-post-title">{{object.heading}}</h3>
                                 {% autoescape off %}
                                     {{object.description}}
                                 {% endautoescape %}
+                                <br>
                                 <a href="contact.html" class="mainBtn pull-right">Apply to this course</a>
                             </div> <!-- /.course-details -->
                         </div> <!-- /.course-post -->

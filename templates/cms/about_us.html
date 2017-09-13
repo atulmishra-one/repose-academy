@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load cms_tags %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Here begin Main Content -->
+            <div class="col-md-8">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="widget-main">
+                            <div class="widget-inner">
+                                <h3 class="archive-title">About us</h3>
+                                <p>
+                                    {% autoescape off %}
+                                        {% about_us %}
+                                    {% endautoescape %}
+                                </p>
+                            </div> <!-- /.widget-inner -->
+                        </div> <!-- /.widget-main -->
+                    </div> <!-- /.col-md-12 -->
+
+                </div> <!-- /.row -->
+            </div> <!-- /.col-md-8 -->
+
+            <!-- Here begin Sidebar -->
+            <div class="col-md-4">
+
+                <div class="widget-main">
+                    <div class="widget-main-title">
+                        {% load pgallery_tags %}
+                        <h4 class="widget-title">Our Gallery</h4>
+                    </div>
+                    <div class="widget-inner">
+                        <div class="gallery-small-thumbs clearfix">
+                            {% get_recent_galleries %}
+                        </div> <!-- /.galler-small-thumbs -->
+                    </div> <!-- /.widget-inner -->
+                </div> <!-- /.widget-main -->
+
+            </div> <!-- /.col-md-4 -->
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+{% endblock %}

@@ -18,8 +18,8 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.conf import settings
 from django.views.static import serve
-from coming_app.views import index
 from django.conf.urls.static import static
+from cms.views import about_us
 
 
 urlpatterns = [
@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^contactus/', include('contactus.urls')),
     url(r'^courses/', include('courses.urls', namespace='courses')),
     url(r'^branches/', include('branches.urls', namespace='branches')),
+    url(r'^about_us/', about_us),
 
 ]
 

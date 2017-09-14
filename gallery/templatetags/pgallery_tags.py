@@ -16,7 +16,7 @@ def get_recent_galleries():
     Returns most recent galleries.
     """
     selected_student = Gallery.objects.published()[0]
-    photos = Photo.objects.filter(gallery=selected_student.pk)[:2]
+    photos = Photo.objects.filter(gallery=selected_student.pk)[:6]
     return dict(
             photos=photos
     )

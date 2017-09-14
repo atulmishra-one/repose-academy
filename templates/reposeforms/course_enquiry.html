@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Being Page Title -->
+    <div class="container">
+        <div class="page-title clearfix">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6><a href="/">Home</a></h6>
+                    <h6><span class="page-active">Course Enquiry</span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+        <div class="row">
+
+             <div class="col-md-12">
+                                     <div class="contact-page-content clearfix">
+                                         <div class="col-md-offset-2 col-md-8">
+<div class="widget-item">
+    <div class="request-information">
+        <h4 class="widget-title">Request Information</h4>
+        <form class="request-info clearfix" method="post" action="/course_enquiry/">
+            {% csrf_token %}
+            <div class="full-row">
+                <label for="cat2">Program of Interest:</label>
+                <div class="input-select">
+                    <select name="course" id="cat2" class="postform">
+                        <option>-- select --</option>
+                        {% load courses %}
+                        {% courses as courses %}
+                        {% for course in courses %}
+                        <option class="level-0" value="{{course.id}}">{{course.name}}</option>
+                        {% endfor %}
+                    </select>
+                    {% if form.errors.course %}
+                  <p class="text text-error">{{ form.errors.course }}</p>
+                {% endif %}
+                </div> <!-- /.input-select -->
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <label for="yourname">Full Name:</label>
+                <input type="text" id="yourname" name="full_name">
+                {% if form.errors.full_name %}
+                  <p class="text text-error">{{ form.errors.full_name }}</p>
+                {% endif %}
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <label for="email-id">Email Address:</label>
+                <input type="text" id="email-id" name="email_address">
+                {% if form.errors.email_address %}
+                  <p class="text text-error">{{ form.errors.email_address }}</p>
+                {% endif %}
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone_number">
+                {% if form.errors.phone_number %}
+                  <p class="text text-error">{{ form.errors.phone_number }}</p>
+                {% endif %}
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <div class="submit_field">
+                    <span class="small-text pull-left">Subscribe to our newsletter</span>
+                    <input class="mainBtn pull-right" type="submit" name="" value="Submit Request">
+                </div> <!-- /.submit-field -->
+            </div> <!-- /.full-row -->
+
+
+        </form> <!-- /.request-info -->
+    </div> <!-- /.request-information -->
+</div> <!-- /.widget-item -->
+
+            </div>
+                 </div>
+</div>
+        </div>
+</div>
+{% endblock %}

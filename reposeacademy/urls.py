@@ -20,6 +20,7 @@ from django.conf import settings
 from django.views.static import serve
 from django.conf.urls.static import static
 from cms.views import about_us
+from reposeforms.views import CourseEnquiryView, ThankYouView
 
 
 urlpatterns = [
@@ -27,11 +28,14 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     url(r'^gallery/', include('gallery.urls', namespace='gallery')),
-    url(r'^', include('default.urls')),
+    url(r'^', include('default.urls', namespace='default')),
     url(r'^contactus/', include('contactus.urls')),
     url(r'^courses/', include('courses.urls', namespace='courses')),
     url(r'^branches/', include('branches.urls', namespace='branches')),
     url(r'^about_us/', about_us),
+    url(r'^batches/', include('batches.urls', namespace='batches')),
+    url(r'^course_enquiry/', CourseEnquiryView.as_view(), name='course_enquiry'),
+    url(r'^thanks/',ThankYouView.as_view())
 
 ]
 

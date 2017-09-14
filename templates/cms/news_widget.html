@@ -1,0 +1,19 @@
+<div class="widget-main">
+    <div class="widget-main-title">
+        <h4 class="widget-title">Latest News</h4>
+    </div> <!-- /.widget-main-title -->
+    <div class="widget-inner">
+
+       {% for news in latest_news %}
+        <div class="blog-list-post clearfix">
+            <!--<div class="blog-list-thumb">-->
+                <!--<a href="blog-single.html"><img src="http://placehold.it/65x65" alt=""></a>-->
+            <!--</div>-->
+            <div class="blog-list-details">
+                <h5 class="blog-list-title"><a href="blog-single.html">{{news.title}}</a></h5>
+                <p class="blog-list-meta small-text">Posted on : {{news.date_published}}</p>
+            </div>
+        </div> <!-- /.blog-list-post -->
+       {% endfor %}
+    </div> <!-- /.widget-inner -->
+</div> <!-- /.widget-main -->

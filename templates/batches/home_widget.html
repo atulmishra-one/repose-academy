@@ -1,0 +1,22 @@
+<div class="widget-main">
+    <div class="widget-main-title">
+        <h4 class="widget-title">Upcoming batches</h4>
+    </div> <!-- /.widget-main-title -->
+    <div class="widget-inner">
+ {% load batches_tags %}
+      {% for latest_batch in latest_batches %}
+        <div class="event-small-list clearfix">
+            <div class="calendar-small">
+                <span class="s-month">{% format_batch_date latest_batch.start_date '%b' %}</span>
+                <span class="s-date">{% format_batch_date latest_batch.start_date '%d' %}</span>
+            </div>
+            <div class="event-small-details">
+                <h5 class="event-small-title"><a href="/batches/">{{latest_batch.course}}</a></h5>
+                <p class="event-small-meta small-text">
+                    {{latest_batch.center}} {{latest_batch.start_time}} to {{latest_batch.end_time}}</p>
+            </div>
+        </div>
+       {% endfor %}
+
+    </div> <!-- /.widget-inner -->
+</div> <!-- /.widget-main -->

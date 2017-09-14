@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load cms_tags %}
+
+{% load pgallery_tags %}
+
+{% block content %}
+    <!-- Being Page Title -->
+    <div class="container">
+        <div class="page-title clearfix">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6><a href="/">Home</a></h6>
+                    <h6><span class="page-active">Batches</span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <!-- Here begin Main Content -->
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="list-event-item">
+                            <div class="box-content-inner clearfix">
+                      <table class="table table-responsive table-bordered">
+                          <thead>
+                            <tr>
+                                <th>Center</th>
+                                <th>Course</th>
+                                <th>Date</th>
+                                <th>Start time</th>
+                                <th>End time</th>
+                                <th>Apply</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           {% for batch in object_list %}
+                                <tr>
+                                    <td>
+                                        {{batch.center}}
+                                    </td>
+                                    <td>
+                                        {{batch.course}}
+                                    </td>
+                                    <td>
+                                        {{batch.start_date}}
+                                    </td>
+                                    <td>
+                                        {{batch.start_time}}
+                                    </td>
+                                    <td>{{batch.end_time}}</td>
+                                    <td><a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">Demo class</a></td>
+                                </tr>
+                           {% endfor %}
+                          </tbody>
+                      </table>
+                                </div></div>
+                    </div> <!-- /.col-md-12 -->
+
+                </div> <!-- /.row -->
+
+            </div> <!-- /.col-md-8 -->
+
+            <!-- Here begin Sidebar -->
+            <div class="col-md-4">
+                {% selected_students %}
+                <div class="widget-main">
+                    <div class="widget-main-title">
+                        <h4 class="widget-title">Photo from Events</h4>
+                    </div>
+                    <div class="widget-inner">
+                        <div class="gallery-small-thumbs clearfix">
+                          {% get_recent_galleries %}
+                        </div> <!-- /.galler-small-thumbs -->
+                    </div> <!-- /.widget-inner -->
+                </div> <!-- /.widget-main -->
+
+            </div> <!-- /.col-md-4 -->
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Batch Enquiry</h4>
+      </div>
+      <div class="modal-body">
+          {% include 'reposeforms/course_enquiry_widget.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

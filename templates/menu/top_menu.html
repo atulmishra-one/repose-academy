@@ -13,34 +13,33 @@
                           {% endfor %}
                         </ul>
                     </li>
-                    <li><a href="blog.html">Info center</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-single.html">Upcoming batches</a></li>
-                            <li><a href="blog-disqus.html">Fees details</a></li>
-                            <li><a href="blog-disqus.html">Photo gallery</a></li>
-                        </ul>
+                    <li><a href="/batches/">Batches</a>
                     </li>
                     <li><a href="blog.html">Student zone</a>
                         <ul class="sub-menu">
-                            <li><a href="blog-single.html">Time table</a></li>
-                            <li><a href="blog-disqus.html">Test series</a></li>
-                            <li><a href="blog-disqus.html">Results</a></li>
+                            <li><a href="#">Results</a></li>
+                            <li><a href="#">Test series</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Online facilities</a>
                         <ul class="sub-menu">
-                            <li><a href="archives.html">Downloads</a></li>
+                            <li><a href="#">Downloads</a></li>
                         </ul>
                     </li>
                     <li><a href="/contactus">Contact</a></li>
                 </ul> <!-- /.main-menu -->
+{% load branches %}
 
+{% get_main_branch as main_branch %}
                 <ul class="social-icons pull-right">
-                    <li><a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" data-toggle="tooltip" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-                    <li><a href="#" data-toggle="tooltip" title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#" data-toggle="tooltip" title="RSS"><i class="fa fa-rss"></i></a></li>
+                    <!--<li><i class="fa fa-phone"></i> +91 {{main_branch.contact}}</li>-->
+                    <!--<li><i class="fa fa-envelope"></i>-->
+                    <!--<a href="mailto:email@universe.com" class="top-email-address">{{main_branch.email}}</a></li>-->
+                    <!--<li><a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a></li>-->
+                    <!--<li><a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li>-->
+                    <!--<li><a href="#" data-toggle="tooltip" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>-->
+                    <!--<li><a href="#" data-toggle="tooltip" title="Google+"><i class="fa fa-google-plus"></i></a></li>-->
+                    <!--<li><a href="#" data-toggle="tooltip" title="RSS"><i class="fa fa-rss"></i></a></li>-->
                 </ul> <!-- /.social-icons -->
             </nav> <!-- /.main-navigation -->
         </div> <!-- /.container -->

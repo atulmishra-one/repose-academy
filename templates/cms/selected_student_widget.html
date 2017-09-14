@@ -1,0 +1,23 @@
+<div class="widget-main">
+    <div class="widget-main-title">
+        <h4 class="widget-title">Selected students</h4>
+    </div>
+    <div class="widget-inner">
+
+      {% for selected_student in selected_students %}
+        <div class="prof-list-item clearfix">
+            <div class="prof-thumb">
+                {% if selected_student.image %}
+                    <img src="{{selected_student.image.url}}" />
+                {% else %}
+                    <img src="http://placehold.it/75x75">
+                {% endif %}
+            </div> <!-- /.prof-thumb -->
+            <div class="prof-details">
+                <h5 class="prof-name-list">{{selected_student.name}}</h5>
+                <p class="small-text">{{selected_student.details}}</p>
+            </div> <!-- /.prof-details -->
+        </div> <!-- /.prof-list-item -->
+      {% endfor %}
+    </div> <!-- /.widget-inner -->
+</div> <!-- /.widget-main -->

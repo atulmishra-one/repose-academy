@@ -1,0 +1,45 @@
+<div class="widget-item">
+    <div class="request-information">
+        <h4 class="widget-title">Request Information</h4>
+        <form class="request-info clearfix" method="post" action="/course_enquiry/">
+            {% csrf_token %}
+            <div class="full-row">
+                <label for="cat2">Program of Interest:</label>
+                <div class="input-select">
+                    <select name="course" id="cat2" class="postform">
+                        <option value="-1">-- select --</option>
+                        {% load courses %}
+                        {% courses as courses %}
+                        {% for course in courses %}
+                        <option class="level-0" value="{{course.id}}">{{course.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div> <!-- /.input-select -->
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <label for="yourname">Full Name:</label>
+                <input type="text" id="yourname" name="full_name">
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <label for="email-id">Email Address:</label>
+                <input type="text" id="email-id" name="email_address">
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone_number">
+            </div> <!-- /.full-row -->
+
+            <div class="full-row">
+                <div class="submit_field">
+                    <span class="small-text pull-left">Subscribe to our newsletter</span>
+                    <input class="mainBtn pull-right" type="submit" name="" value="Submit Request">
+                </div> <!-- /.submit-field -->
+            </div> <!-- /.full-row -->
+
+
+        </form> <!-- /.request-info -->
+    </div> <!-- /.request-information -->
+</div> <!-- /.widget-item -->

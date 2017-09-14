@@ -13,6 +13,7 @@ class Batches(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     active = models.BooleanField(default=True)
+    show_on_home_page = models.BooleanField(default=False, help_text='This appear on home page widget')
 
     def __str__(self):
         return '{}'.format(self.course.name)

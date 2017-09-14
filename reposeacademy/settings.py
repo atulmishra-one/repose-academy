@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'suit_redactor',
     'menu',
     'cms',
+    'reposeforms',
 ]
 
 MIDDLEWARE = [

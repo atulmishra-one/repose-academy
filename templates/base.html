@@ -57,6 +57,7 @@
 {% get_main_branch as main_branch %}
 
 <header class="site-header">
+
     <div class="container">
         <div class="row">
             <div class="col-md-4 header-left">
@@ -74,13 +75,14 @@
             </div> <!-- /.col-md-4 -->
 
             <div class="col-md-4 header-right">
+
             </div> <!-- /.header-right -->
         </div>
     </div> <!-- /.container -->
-    {% load menus %}
+
+{% load menus %}
 
     {% get_menus %}
-
 </header> <!-- /.site-header -->
 
 {% block content %} {% endblock %}
@@ -111,9 +113,8 @@
                 <div class="footer-widget">
                     <h4 class="footer-widget-title">Study</h4>
                     <ul class="list-links">
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Batches</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="/batches/">Batches</a></li>
+                        <li><a href="/branches/">Branches</a></li>
                     </ul>
                 </div>
             </div>
@@ -140,11 +141,11 @@
                 </div> <!-- /.col-md-5 -->
                 <div class="col-md-7">
                     <ul class="footer-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="events-list.html">Branches</a></li>
-                        <li><a href="blog.html">Batches</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about_us/">About us</a></li>
+                        <li><a href="/branches/">Branches</a></li>
+                        <li><a href="/batches/">Batches</a></li>
+                        <li><a href="/contactus/">Contact</a></li>
                     </ul>
                 </div> <!-- /.col-md-7 -->
             </div> <!-- /.row -->
@@ -157,6 +158,6 @@
 <script src="{% static 'blue/bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'blue/js/plugins.js' %}"></script>
 <script src="{% static 'blue/js/custom.js' %}"></script>
-
+{% block extra_js %} {% endblock %}
 </body>
 </html>
